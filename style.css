@@ -1,0 +1,90 @@
+/* Import the font */
+@import url("https://fonts.googleapis.com/css2?family=Miniver&display=swap");
+
+/* Basic Reset */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: poppins, sans-serif;
+  text-decoration: none;
+  list-style: none;
+}
+:root {
+  --white-color: #fff;
+  --dark-color: #252525;
+  --primary-color: #3b141c;
+  --secondary-color: #f3961c;
+  --light-pink-color: #faf4f5;
+  --medium-gray-color: #ccc;
+
+  /* Font Size */
+  --font-size-s: 0.9rem;
+  --font-size-n: 1rem;
+  --font-size-m: 1.2rem;
+  --font-size-l: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 2.5rem;
+
+  /* Font Weight */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Border Radius */
+  --border-radius-s: 8px;
+  --border-radius-m: 30px;
+  --border-radius-circle: 50%;
+
+  /* Site max Width */
+  --site-max-width: 1400px;
+}
+
+body {
+  height: 100dvh;
+}
+
+.header {
+  background-color: var(--primary-color);
+}
+.header .nav-bar {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  justify-content: space-between;
+}
+.nav-bar {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--site-max-width);
+
+}
+
+.nav-bar .nav-logo .logo-text {
+  color: var(--white-color);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+.nav-bar .nav-list .nav-link {
+  color: var(--white-color);
+  padding: 10px 18px;
+  font-size: var(--font-size-m);
+
+  border-radius: var(--border-radius-m);
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+.nav-bar .nav-list .nav-link:hover {
+  color: var(--white-color);
+  background-color: var(--secondary-color);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 13px;
+}
