@@ -225,8 +225,7 @@ span {
 .great-vibes {
   font-size: 1.5rem;
   font-family: "great vibes", sans-serif;
-  margin:1.5rem 0;
-
+  margin: 1.5rem 0;
 }
 
 .about-section .social-link-list {
@@ -243,6 +242,67 @@ span {
   color: var(--secondary-color);
 }
 
+/* Menu Section */
+
+.menu-header {
+  text-align: center;
+  color: white;
+}
+.menu-section .section-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  min-height: auto;
+  align-items: start;
+  padding-top: 100px;
+}
+.menu-section {
+  background-image: url("img/Menu background.png");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 100px;
+}
+.our-menu {
+  font-family: "great vibes";
+  font-size: var(--font-size-xl);
+  color: var(--secondary-color);
+  font-weight: var(--font-weight-normal);
+}
+
+.menu-title {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-medium);
+}
+
+.about-menu {
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-medium);
+  color: rgba(255, 255, 255, 0.4);
+}
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  height: 1px;
+  width: 80px;
+  background: linear-gradient(to right, transparent, #f3961c);
+}
+
+.divider::after {
+  background: linear-gradient(to left, transparent, #f3961c);
+}
+
+.divider i {
+  color: var(--secondary-color);
+  font-size: 25px;
+}
 
 @media (max-width: 850px) {
   :root {
