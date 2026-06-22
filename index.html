@@ -32,35 +32,47 @@
             <h2 class="logo-text">☕ Great Vibes</h2>
           </a>
           <ul class="nav-menu">
-            <button id="menu-close-button" type="button" class="fas fa-times"></button>
+            <button
+              id="menu-close-button"
+              type="button"
+              class="fas fa-times"
+            ></button>
             <li class="nave-item">
-              <a class="nav-link" href="">Home</a>
+              <a class="nav-link" href="#hero">Home</a>
             </li>
             <li class="nave-item">
-              <a class="nav-link" href="">About</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
             <li class="nave-item">
-              <a class="nav-link" href="">Menu</a>
+              <a class="nav-link" href="#menu">Menu</a>
             </li>
             <li class="nave-item">
-              <a class="nav-link" href="">Testimonials</a>
+              <a class="nav-link" href="#testimonials">Testimonials</a>
             </li>
             <li class="nave-item">
-              <a class="nav-link" href="">Contact</a>
+              <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
 
-          <button type="button" id="menu-open-button" class="fas fa-bars"></button>
+          <button
+            type="button"
+            id="menu-open-button"
+            class="fas fa-bars"
+          ></button>
         </nav>
       </header>
-
+      <!-- Main content -->
       <main>
-        <section class="hero-section">
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
           <div class="section-container">
             <div class="hero-details">
               <h2 class="title">Best Coffee</h2>
               <h3 class="subtitle">
-                Make your day great with our special coffee <span><img class="coffee-cup" src="img/coffee cup.png" alt=""></span>
+                Make your day great with our special coffee
+                <span
+                  ><img class="coffee-cup" src="img/coffee cup.png" alt=""
+                /></span>
               </h3>
               <p class="description">
                 Welcome to our coffee Paradise, where every bean tells a story
@@ -73,7 +85,7 @@
             </div>
             <div class="hero-image-wrapper">
               <img
-                class="img"
+                class="hero-image"
                 src="img/delicious coffee to go cup.png"
                 alt=""
                 class="hero-image"
@@ -81,7 +93,52 @@
             </div>
           </div>
         </section>
-        <section></section>
+        <!-- About Section -->
+        <section class="about-section" id="about">
+          <div class="section-container">
+            <div class="about-image-wrapper">
+              <img
+                class="about-image"
+                src="img/coffee splash.png"
+                alt="About"
+              />
+            </div>
+            <div class="about-details">
+              <h2 class="section-title">About Us</h2>
+              <p class="great-vibes">Great Vibes, Redefine your mood</p>
+              <p class="text">
+                Each bean is carefully selected from Ethiopia's most celebrated
+                growing regions. Rich volcanic soils. Precise altitude.
+                Generations of expertise woven into the character of every
+                harvest.
+              </p>
+              <p class="great-vibes">
+                This is where clarity finds its flavor. Where great vibes become
+                your standard.
+              </p>
+              <div class="social-link-list">
+                <a href="#" class="social-link">
+                  <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="#" class="social-link">
+                  <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Menu Section -->
+        <section class="menu-section" id="menu">
+        </section>
+        <!-- Testimonials-section -->
+        <section class="testimonials-section" id="testimonials">
+        </section>
+        <!-- Contact-section -->
+        <section class="contact-section" id="contact">
+        </section>
       </main>
     </div>
     <script src="app.js"></script>
