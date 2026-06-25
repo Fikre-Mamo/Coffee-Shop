@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Great Vibes Coffee Shop — Specialty coffee handcrafted with love in Addis Ababa. Explore our menu of hot coffee, iced drinks, teas, and fresh juices."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
       rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     />
     <link
       rel="stylesheet"
@@ -21,35 +21,41 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Great Vibes</title>
+    <title>Great Vibes | Specialty Coffee in Addis Ababa</title>
   </head>
   <body>
+    <!-- Skip to content link -->
+    <a href="#main" class="skip-link">Skip to content</a>
     <div class="container">
       <!-- Header / Navbar -->
       <header class="header">
         <nav class="nav-bar">
-          <a class="nav-logo" href="">
-            <h2 class="logo-text">☕ Great Vibes</h2>
+          <a class="nav-logo" href="#hero">
+            <span class="logo-text">☕ Great Vibes</span>
           </a>
           <ul class="nav-menu">
-            <button
-              id="menu-close-button"
-              type="button"
-              class="fas fa-times"
-            ></button>
-            <li class="nave-item">
+            <li class="nav-menu-close">
+              <button
+                id="menu-close-button"
+                type="button"
+                aria-label="Close menu"
+              >
+                <i class="fas fa-times" aria-hidden="true"></i>
+              </button>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="#hero">Home</a>
             </li>
-            <li class="nave-item">
+            <li class="nav-item">
               <a class="nav-link" href="#about">About</a>
             </li>
-            <li class="nave-item">
+            <li class="nav-item">
               <a class="nav-link" href="#menu">Menu</a>
             </li>
-            <li class="nave-item">
+            <li class="nav-item">
               <a class="nav-link" href="#testimonials">Testimonials</a>
             </li>
-            <li class="nave-item">
+            <li class="nav-item">
               <a class="nav-link" href="#contact">Contact</a>
             </li>
           </ul>
@@ -57,38 +63,46 @@
           <button
             type="button"
             id="menu-open-button"
+            aria-label="Open menu"
             class="fas fa-bars"
           ></button>
         </nav>
       </header>
       <!-- Main content -->
-      <main>
+      <main id="main">
         <!-- Hero Section -->
         <section class="hero-section" id="hero">
           <div class="section-container">
             <div class="hero-details">
-              <h2 class="title">Best Coffee</h2>
-              <h3 class="subtitle">
+              <h1 class="title">Best Coffee</h1>
+              <h2 class="subtitle">
                 Make your day great with our special coffee
                 <span
-                  ><img class="coffee-cup" src="img/coffee cup.png" alt=""
+                  ><img
+                    class="coffee-cup"
+                    src="img/coffee cup.png"
+                    alt=""
+                    aria-hidden="true"
                 /></span>
-              </h3>
+              </h2>
               <p class="description">
                 Welcome to our coffee Paradise, where every bean tells a story
                 and every cup sparks joy ✨
               </p>
               <div class="buttons">
-                <a href="" class="button order-now"> Order Now </a>
-                <a href="" class="button contact-us"> Contact Us </a>
+                <a href="#menu" class="button order-now"> Order Now </a>
+                <a href="#contact" class="button contact-us"> Contact Us </a>
               </div>
             </div>
             <div class="hero-image-wrapper">
               <img
                 class="hero-image"
                 src="img/delicious coffee to go cup.png"
-                alt=""
-                class="hero-image"
+                alt="Delicious coffee in a to-go cup"
+                width="500"
+                height="500"
+                loading="eager"
+                fetchpriority="high"
               />
             </div>
           </div>
@@ -100,7 +114,7 @@
               <img
                 class="about-image"
                 src="img/coffee splash.png"
-                alt="About"
+                alt="Coffee beans splashing artistically"
               />
             </div>
             <div class="about-details">
@@ -117,14 +131,14 @@
                 your standard.
               </p>
               <div class="social-link-list">
-                <a href="#" class="social-link">
-                  <i class="fa-brands fa-facebook"></i>
+                <a href="#" class="social-link" aria-label="Facebook">
+                  <i class="fa-brands fa-facebook" aria-hidden="true"></i>
                 </a>
-                <a href="#" class="social-link">
-                  <i class="fa-brands fa-instagram"></i>
+                <a href="#" class="social-link" aria-label="Instagram">
+                  <i class="fa-brands fa-instagram" aria-hidden="true"></i>
                 </a>
-                <a href="#" class="social-link">
-                  <i class="fa-brands fa-x-twitter"></i>
+                <a href="#" class="social-link" aria-label="Twitter">
+                  <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
                 </a>
               </div>
             </div>
@@ -133,27 +147,35 @@
         <!-- Menu Section -->
         <section class="menu-section" id="menu">
           <!-- Menu Header -->
-          <div class="menu-header">
+          <div class="section-header">
             <h3 class="our-menu">Our Menu</h3>
             <h2 class="menu-title">Perfect Coffee for Every Mood</h2>
             <div class="divider">
-              <i class="java fa-brands fa-java"></i>
+              <i class="java fa-brands fa-java" aria-hidden="true"></i>
             </div>
             <p class="about-menu">
-              Handcrafted with love. made for you. Explore our finest <br />
+              Handcrafted with love. Made for you. Explore our finest
               selection of coffee and beverages.
             </p>
           </div>
           <div class="section-container">
-            <!-- Menu toggel buttons -->
+            <!-- Menu toggle buttons -->
             <nav class="menu-filters" aria-label="Menu categories">
               <button type="button" class="filter-btn active" data-filter="all">
                 All Drinks
               </button>
-              <button type="button" class="filter-btn" data-filter="hot">Hot Coffee</button>
-              <button type="button" class="filter-btn" data-filter="iced">Iced Coffee</button>
-              <button type="button" class="filter-btn" data-filter="tea">Tea</button>
-              <button type="button" class="filter-btn" data-filter="juice">Juice</button>
+              <button type="button" class="filter-btn" data-filter="hot">
+                Hot Coffee
+              </button>
+              <button type="button" class="filter-btn" data-filter="iced">
+                Iced Coffee
+              </button>
+              <button type="button" class="filter-btn" data-filter="tea">
+                Tea
+              </button>
+              <button type="button" class="filter-btn" data-filter="juice">
+                Juice
+              </button>
             </nav>
             <!-- ── Menu Grid ── -->
             <div class="menu-grid">
@@ -342,26 +364,26 @@
                   </div>
                 </div>
               </div>
-              <!-- Hot drick -->
+              <!-- Hot Drinks -->
               <div class="grid-container active-grid" data-filter="hot">
                 <div class="menu-card">
                   <div class="card-image">
                     <img
                       class="menu-img"
                       src="img/menu img/Macchiato.jpg"
-                      alt="Cappuccino"
+                      alt="Macchiato"
                     />
                   </div>
                   <div class="card-content">
                     <div class="card-text">
                       <h3 class="card-name">Macchiato</h3>
                       <p class="card-desc">
-                        Rich espresso with steamed milk and a smooth foam.
+                        Espresso marked with a touch of frothy milk.
                       </p>
                     </div>
                     <div class="card-footer">
                       <span class="card-price">$4.50</span>
-                      <button class="card-add" aria-label="Add Cappuccino">
+                      <button class="card-add" aria-label="Add Macchiato">
                         +
                       </button>
                     </div>
@@ -373,19 +395,19 @@
                     <img
                       class="menu-img"
                       src="img/menu img/Americano.jpg"
-                      alt="Cappuccino"
+                      alt="Americano"
                     />
                   </div>
                   <div class="card-content">
                     <div class="card-text">
                       <h3 class="card-name">Americano</h3>
                       <p class="card-desc">
-                        Rich espresso with steamed milk and a smooth foam.
+                        Espresso diluted with hot water for a smooth, bold taste.
                       </p>
                     </div>
                     <div class="card-footer">
                       <span class="card-price">$4.50</span>
-                      <button class="card-add" aria-label="Add Cappuccino">
+                      <button class="card-add" aria-label="Add Americano">
                         +
                       </button>
                     </div>
@@ -461,26 +483,26 @@
                 </div>
               </div>
 
-              <!-- Iced drick -->
+              <!-- Iced Drinks -->
               <div class="grid-container active-grid" data-filter="iced">
                 <div class="menu-card">
                   <div class="card-image">
                     <img
                       class="menu-img"
                       src="img/menu img/Mocha.jpg"
-                      alt="Mocha"
+                      alt="Iced Mocha"
                     />
                   </div>
                   <div class="card-content">
                     <div class="card-text">
-                      <h3 class="card-name">Mocha</h3>
+                      <h3 class="card-name">Iced Mocha</h3>
                       <p class="card-desc">
-                        Espresso with chocolate and steamed milk.
+                        Chilled espresso with chocolate, milk, and ice.
                       </p>
                     </div>
                     <div class="card-footer">
                       <span class="card-price">$4.80</span>
-                      <button class="card-add" aria-label="Add Mocha">+</button>
+                      <button class="card-add" aria-label="Add Iced Mocha">+</button>
                     </div>
                   </div>
                 </div>
@@ -537,19 +559,19 @@
                     <img
                       class="menu-img"
                       src="img/menu img/Nitro colde berw.jpg"
-                      alt="Cold Brew"
+                      alt="Nitro Cold Brew"
                     />
                   </div>
                   <div class="card-content">
                     <div class="card-text">
-                      <h3 class="card-name">Nitro Cold Berw</h3>
+                      <h3 class="card-name">Nitro Cold Brew</h3>
                       <p class="card-desc">
-                        Smooth, refreshing coffee brewed cold.
+                        Nitrogen-infused cold brew with a creamy, smooth finish.
                       </p>
                     </div>
                     <div class="card-footer">
                       <span class="card-price">$4.30</span>
-                      <button class="card-add" aria-label="Add Cold Brew">
+                      <button class="card-add" aria-label="Add Nitro Cold Brew">
                         +
                       </button>
                     </div>
@@ -561,19 +583,19 @@
                     <img
                       class="menu-img"
                       src="img/menu img/Vanilla Iced Coffee.jpg"
-                      alt="Cold Brew"
+                      alt="Vanilla Iced Coffee"
                     />
                   </div>
                   <div class="card-content">
                     <div class="card-text">
-                      <h3 class="card-name">Vanila Iced Coffee</h3>
+                      <h3 class="card-name">Vanilla Iced Coffee</h3>
                       <p class="card-desc">
-                        Smooth, refreshing coffee brewed cold.
+                        Sweet vanilla blended with chilled coffee and ice.
                       </p>
                     </div>
                     <div class="card-footer">
                       <span class="card-price">$4.30</span>
-                      <button class="card-add" aria-label="Add Cold Brew">
+                      <button class="card-add" aria-label="Add Vanilla Iced Coffee">
                         +
                       </button>
                     </div>
@@ -585,19 +607,19 @@
                     <img
                       class="menu-img"
                       src="img/menu img/Hazelnut Iced Coffee.jpg"
-                      alt="Cold Brew"
+                      alt="Hazelnut Iced Latte"
                     />
                   </div>
                   <div class="card-content">
                     <div class="card-text">
                       <h3 class="card-name">Hazelnut Iced Latte</h3>
                       <p class="card-desc">
-                        Smooth, refreshing coffee brewed cold.
+                        Nutty hazelnut syrup with espresso over ice.
                       </p>
                     </div>
                     <div class="card-footer">
                       <span class="card-price">$4.30</span>
-                      <button class="card-add" aria-label="Add Cold Brew">
+                      <button class="card-add" aria-label="Add Hazelnut Iced Latte">
                         +
                       </button>
                     </div>
@@ -605,7 +627,7 @@
                 </div>
               </div>
 
-              <!-- Tea drick -->
+              <!-- Tea Drinks -->
               <div class="grid-container active-grid" data-filter="tea">
                 <div class="menu-card">
                   <div class="card-image">
@@ -634,17 +656,17 @@
                     <img
                       class="menu-img"
                       src="img/menu img/Green tea.jpg"
-                      alt="Matcha Latte"
+                      alt="Green Tea"
                     />
                   </div>
                   <div class="card-content">
                     <div class="card-text">
                       <h3 class="card-name">Green Tea</h3>
-                      <p class="card-desc">Premium matcha with steamed milk.</p>
+                      <p class="card-desc">Light and refreshing green tea leaves, steeped to perfection.</p>
                     </div>
                     <div class="card-footer">
                       <span class="card-price">$4.60</span>
-                      <button class="card-add" aria-label="Add Matcha Latte">
+                      <button class="card-add" aria-label="Add Green Tea">
                         +
                       </button>
                     </div>
@@ -656,17 +678,17 @@
                     <img
                       class="menu-img"
                       src="img/menu img/Black tea.jpg"
-                      alt="Matcha Latte"
+                      alt="Black Tea"
                     />
                   </div>
                   <div class="card-content">
                     <div class="card-text">
                       <h3 class="card-name">Black Tea</h3>
-                      <p class="card-desc">Premium matcha with steamed milk.</p>
+                      <p class="card-desc">Bold, full-bodied black tea with a rich amber finish.</p>
                     </div>
                     <div class="card-footer">
                       <span class="card-price">$4.60</span>
-                      <button class="card-add" aria-label="Add Matcha Latte">
+                      <button class="card-add" aria-label="Add Black Tea">
                         +
                       </button>
                     </div>
@@ -678,17 +700,17 @@
                     <img
                       class="menu-img"
                       src="img/menu img/Lemon mint tea.jpg"
-                      alt="Matcha Latte"
+                      alt="Lemon Mint Tea"
                     />
                   </div>
                   <div class="card-content">
                     <div class="card-text">
                       <h3 class="card-name">Lemon Mint Tea</h3>
-                      <p class="card-desc">Premium matcha with steamed milk.</p>
+                      <p class="card-desc">Zesty lemon and cool mint in a soothing herbal blend.</p>
                     </div>
                     <div class="card-footer">
                       <span class="card-price">$4.60</span>
-                      <button class="card-add" aria-label="Add Matcha Latte">
+                      <button class="card-add" aria-label="Add Lemon Mint Tea">
                         +
                       </button>
                     </div>
@@ -724,19 +746,19 @@
                     <img
                       class="menu-img"
                       src="img/menu img/Ice Tea.jpg"
-                      alt="Chai Latte"
+                      alt="Iced Tea"
                     />
                   </div>
                   <div class="card-content">
                     <div class="card-text">
-                      <h3 class="card-name">Ice Tea</h3>
+                      <h3 class="card-name">Iced Tea</h3>
                       <p class="card-desc">
-                        Black tea with spices and steamed milk.
+                        Chilled brewed tea served over ice for a cool refreshment.
                       </p>
                     </div>
                     <div class="card-footer">
                       <span class="card-price">$4.20</span>
-                      <button class="card-add" aria-label="Add Chai Latte">
+                      <button class="card-add" aria-label="Add Iced Tea">
                         +
                       </button>
                     </div>
@@ -744,26 +766,26 @@
                 </div>
               </div>
 
-              <!-- Juice drick -->
+              <!-- Juice Drinks -->
               <div class="grid-container active-grid" data-filter="juice">
                 <div class="menu-card">
                   <div class="card-image">
                     <img
                       class="menu-img"
                       src="img/menu img/Orange.jpg"
-                      alt="Cappuccino"
+                      alt="Orange Juice"
                     />
                   </div>
                   <div class="card-content">
                     <div class="card-text">
                       <h3 class="card-name">Orange Juice</h3>
                       <p class="card-desc">
-                        Rich espresso with steamed milk and a smooth foam.
+                        Freshly squeezed oranges for a sweet, tangy burst.
                       </p>
                     </div>
                     <div class="card-footer">
                       <span class="card-price">$4.50</span>
-                      <button class="card-add" aria-label="Add Cappuccino">
+                      <button class="card-add" aria-label="Add Orange Juice">
                         +
                       </button>
                     </div>
@@ -775,19 +797,19 @@
                     <img
                       class="menu-img"
                       src="img/menu img/Pineapple juice.jpg"
-                      alt="Cappuccino"
+                      alt="Pineapple Juice"
                     />
                   </div>
                   <div class="card-content">
                     <div class="card-text">
                       <h3 class="card-name">Pineapple Juice</h3>
                       <p class="card-desc">
-                        Rich espresso with steamed milk and a smooth foam.
+                        Tropical pineapple blended into a refreshing drink.
                       </p>
                     </div>
                     <div class="card-footer">
                       <span class="card-price">$4.50</span>
-                      <button class="card-add" aria-label="Add Cappuccino">
+                      <button class="card-add" aria-label="Add Pineapple Juice">
                         +
                       </button>
                     </div>
@@ -799,19 +821,19 @@
                     <img
                       class="menu-img"
                       src="img/menu img/Avocado.jpg"
-                      alt="Cappuccino"
+                      alt="Avocado Juice"
                     />
                   </div>
                   <div class="card-content">
                     <div class="card-text">
                       <h3 class="card-name">Avocado Juice</h3>
                       <p class="card-desc">
-                        Rich espresso with steamed milk and a smooth foam.
+                        Creamy avocado blended smooth for a rich, velvety sip.
                       </p>
                     </div>
                     <div class="card-footer">
                       <span class="card-price">$4.50</span>
-                      <button class="card-add" aria-label="Add Cappuccino">
+                      <button class="card-add" aria-label="Add Avocado Juice">
                         +
                       </button>
                     </div>
@@ -823,19 +845,19 @@
                     <img
                       class="menu-img"
                       src="img/menu img/Strawberry Smoothie.jpg"
-                      alt="Cappuccino"
+                      alt="Strawberry Smoothie"
                     />
                   </div>
                   <div class="card-content">
                     <div class="card-text">
                       <h3 class="card-name">Strawberry Smoothie</h3>
                       <p class="card-desc">
-                        Rich espresso with steamed milk and a smooth foam.
+                        Fresh strawberries blended into a thick, fruity smoothie.
                       </p>
                     </div>
                     <div class="card-footer">
                       <span class="card-price">$4.50</span>
-                      <button class="card-add" aria-label="Add Cappuccino">
+                      <button class="card-add" aria-label="Add Strawberry Smoothie">
                         +
                       </button>
                     </div>
@@ -847,19 +869,19 @@
                     <img
                       class="menu-img"
                       src="img/menu img/Cocktail.jpg"
-                      alt="Cappuccino"
+                      alt="Cocktail"
                     />
                   </div>
                   <div class="card-content">
                     <div class="card-text">
-                      <h3 class="card-name">Coctile</h3>
+                      <h3 class="card-name">Cocktail</h3>
                       <p class="card-desc">
-                        Rich espresso with steamed milk and a smooth foam.
+                        A vibrant mix of fresh fruits and juices, perfectly blended.
                       </p>
                     </div>
                     <div class="card-footer">
                       <span class="card-price">$4.50</span>
-                      <button class="card-add" aria-label="Add Cappuccino">
+                      <button class="card-add" aria-label="Add Cocktail">
                         +
                       </button>
                     </div>
@@ -871,11 +893,285 @@
           </div>
         </section>
         <!-- Testimonials-section -->
-        <section class="testimonials-section" id="testimonials"></section>
-        <!-- Contact-section -->
-        <section class="contact-section" id="contact"></section>
+        <section class="testimonials-section" id="testimonials">
+          <div class="section-header">
+            <img class="testimonial-img" src="img/java-line.svg" alt="" aria-hidden="true" />
+            <h2 class="title">Testimonials</h2>
+            <h3 class="subtitle">Loved by <span class="span-subtitle">Our People</span></h3>
+            <div class="divider">
+              <img src="img/coffee-bean.png" alt="" aria-hidden="true" />
+            </div>
+            <p class="description">
+              Real people, real stories, real <span class="span-great-coffee">great Coffee</span>
+            </p>
+          </div>
+
+          <div class="section-container">
+            <div class="section-grid">
+              <!-- User-1 -->
+              <div class="testimonial-card card-1">
+                <div class="rating-section">
+                  <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                  <div class="rating" aria-label="4.5 out of 5 stars">
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star-half-alt active" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="message">
+                  <p>Great Vibes lives up to its name. The coffee is excellent, and the atmosphere is always welcoming. My favorite spot to relax.</p>
+                </div>
+                <hr>
+                <div class="user">
+                  <img class="user-img" src="img/users/user-1.jpg" alt="Photo of Sara">
+                  <div class="user-details">
+                    <p>Sara</p>
+                    <p class="city">Addis Ababa</p>
+                  </div>
+                </div>
+              </div>
+              <!-- User-2 -->
+              <div class="testimonial-card card-2">
+               <div class="rating-section">
+                  <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                  <div class="rating" aria-label="4.5 out of 5 stars">
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star-half-alt active" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="message">
+                  <p>The staff are friendly, the coffee is consistently good, and the shop has a cozy feel. I always enjoy my visits here.</p>
+                </div>
+                <hr>
+                <div class="user">
+                   <img class="user-img" src="img/users/user-2.jpg" alt="Photo of Daniel">
+                   <div class="user-details">
+                     <p>Daniel</p>
+                     <p class="city">Addis Ababa</p>
+                   </div>
+                </div>
+              </div>
+              <!-- User-3 -->
+              <div class="testimonial-card card-3">
+                <div class="rating-section">
+                  <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                  <div class="rating" aria-label="4.5 out of 5 stars">
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star-half-alt active" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="message">
+                  <p>Great coffee, comfortable seating, and a positive atmosphere. It's the perfect place to catch up with friends or get some work done.</p>
+                </div>
+                <hr>
+                <div class="user">
+                  <img class="user-img" src="img/users/user-3.jpg" alt="Photo of John">
+                  <div class="user-details">
+                    <p>John</p>
+                    <p class="city">Addis Ababa</p>
+                  </div>
+                </div>
+              </div>
+              <!-- User-4 -->
+              <div class="testimonial-card card-4">
+                <div class="rating-section">
+                  <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                  <div class="rating" aria-label="4.5 out of 5 stars">
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star-half-alt active" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="message">
+                  <p>Every drink I've tried has been delicious. The service is fast, and the vibe makes me want to stay longer.</p>
+                </div>
+                <hr>
+                <div class="user">
+                  <img class="user-img" src="img/users/user-4.jpg" alt="Photo of Emilia">
+                  <div class="user-details">
+                    <p>Emilia</p>
+                    <p class="city">Addis Ababa</p>
+                  </div>
+                </div>
+              </div>
+              <!-- User-5 -->
+              <div class="testimonial-card card-5">
+                <div class="rating-section">
+                  <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                  <div class="rating" aria-label="4.5 out of 5 stars">
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star-half-alt active" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="message">
+                  <p>This coffee shop has become my go-to spot. The quality of the coffee and the warm environment keep me coming back.</p>
+                </div>
+                <hr>
+                <div class="user">
+                  <img class="user-img" src="img/users/user-5.jpg" alt="Photo of Jessica">
+                  <div class="user-details">
+                    <p>Jessica</p>
+                    <p class="city">Addis Ababa</p>
+                  </div>
+                </div>
+              </div>
+              <!-- User-6 -->
+              <div class="testimonial-card card-6">
+                <div class="rating-section">
+                  <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                  <div class="rating" aria-label="4.5 out of 5 stars">
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star-half-alt active" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="message">
+                  <p>Great Vibes offers a fantastic experience from start to finish. Clean space, friendly staff, and amazing coffee every time.</p>
+                </div>
+                <hr>
+                <div class="user">
+                  <img class="user-img" src="img/users/user-6.jpg" alt="Photo of Mark">
+                  <div class="user-details">
+                    <p>Mark</p>
+                    <p class="city">Addis Ababa</p>
+                  </div>
+                </div>
+              </div>
+              <!-- User-7 -->
+              <div class="testimonial-card card-7">
+                <div class="rating-section">
+                  <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                  <div class="rating" aria-label="4.5 out of 5 stars">
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star-half-alt active" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="message">
+                  <p>I stopped by for a quick coffee and ended up staying for hours. The atmosphere is relaxing, and the drinks are top-notch.</p>
+                </div>
+                <hr>
+                <div class="user">
+                  <img class="user-img" src="img/users/user-7.jpg" alt="Photo of Roberto">
+                  <div class="user-details">
+                    <p>Roberto</p>
+                    <p class="city">Addis Ababa</p>
+                  </div>
+                </div>
+              </div>
+              <!-- User-8 -->
+              <div class="testimonial-card card-8">
+                <div class="rating-section">
+                  <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+                  <div class="rating" aria-label="4.5 out of 5 stars">
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star active" aria-hidden="true"></i>
+                    <i class="fas fa-star-half-alt active" aria-hidden="true"></i>
+                  </div>
+                </div>
+                <div class="message">
+                  <p>One of the best coffee shops I've visited. The coffee tastes great, the staff are welcoming, and the environment is perfect for any occasion.</p>
+                </div>
+                <hr>
+                <div class="user">
+                  <img class="user-img" src="img/users/user-8.jpg" alt="Photo of Alissa">
+                  <div class="user-details">
+                    <p>Alissa</p>
+                    <p class="city">Addis Ababa</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        </section>
+        <!-- Contact Section -->
+        <section class="contact-section" id="contact">
+          <div class="section-container contact-container">
+            <div class="contact-details">
+              <h2 class="section-title">Contact Us</h2>
+              <p class="great-vibes">We'd love to hear from you</p>
+              <div class="contact-cards">
+                <div class="contact-card">
+                  <div class="contact-icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
+                  <h3>Location</h3>
+                  <p>Bole Road, Addis Ababa, Ethiopia</p>
+                </div>
+                <div class="contact-card">
+                  <div class="contact-icon"><i class="fas fa-phone" aria-hidden="true"></i></div>
+                  <h3>Phone</h3>
+                  <p>+251 911 234 567</p>
+                </div>
+                <div class="contact-card">
+                  <div class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+                  <h3>Email</h3>
+                  <p>hello@greatvibes.coffee</p>
+                </div>
+                <div class="contact-card">
+                  <div class="contact-icon"><i class="fas fa-clock" aria-hidden="true"></i></div>
+                  <h3>Hours</h3>
+                  <p>Mon – Sat: 7:00 AM – 10:00 PM</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <span class="logo-text footer-logo">☕ Great Vibes</span>
+          <p class="footer-tagline">Specialty coffee handcrafted with love in Addis Ababa.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="social-link-list">
+            <a href="#" class="social-link" aria-label="Facebook">
+              <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Instagram">
+              <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter">
+              <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Great Vibes Coffee. All rights reserved.</p>
+      </div>
+    </footer>
     <script src="app.js"></script>
   </body>
 </html>
