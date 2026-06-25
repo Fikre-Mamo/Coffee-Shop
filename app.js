@@ -92,3 +92,71 @@ document.querySelectorAll(".card-add").forEach((btn) => {
     showToast(`${cardName} added to cart!`);
   });
 });
+
+// ── Infinite scroll for testimonial cards (mobile ≤850px) ──
+(function initTestimonialMarquee() {
+  const grid = document.querySelector(".testimonials-section .section-grid");
+  if (!grid) return;
+
+  const mql = window.matchMedia("(max-width: 850px)");
+  let clones = [];
+
+  function createClones() {
+    // Avoid duplicating clones
+    if (clones.length) return;
+
+    const originals = Array.from(
+      grid.querySelectorAll(".testimonial-card:not(.clone)")
+    );
+    originals.forEach((card) => {
+      const clone = card.cloneNode(true);
+      clone.classList.add("clone");
+      clone.setAttribute("aria-hidden", "true");
+      grid.appendChild(clone);
+      clones.push(clone);
+    });
+
+    // Adjust animation duration based on content width for consistent speed
+    requestAnimationFrame(() => {
+      const totalWidth = grid.scrollWidth;
+      // Speed: ~60px per second
+      const duration = totalWidth / 60;
+      grid.style.animationDuration = `${duration}s`;
+    });
+  }
+
+  function removeClones() {
+    clones.forEach((c) => c.remove());
+    clones = [];
+    grid.style.animationDuration = "";
+  }
+
+  function handleBreakpoint(e) {
+    if (e.matches) {
+      createClones();
+    } else {
+      removeClones();
+    }
+  }
+
+  // Pause animation on touch (mirrors CSS :hover pause)
+  grid.addEventListener("touchstart", () => {
+    grid.style.animationPlayState = "paused";
+  }, { passive: true });
+
+  grid.addEventListener("touchend", () => {
+    grid.style.animationPlayState = "";
+  });
+
+  // Respect prefers-reduced-motion
+  const prefersReducedMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  );
+  if (prefersReducedMotion.matches) {
+    grid.style.animationPlayState = "paused";
+  }
+
+  // Init and listen for resize changes
+  mql.addEventListener("change", handleBreakpoint);
+  handleBreakpoint(mql);
+})();

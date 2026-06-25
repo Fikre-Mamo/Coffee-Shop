@@ -923,10 +923,23 @@ section {
   .testimonials-section .section-container {
     position: relative;
     min-height: auto;
-    overflow-x: auto;
-    overflow-y: visible;
-    mask-image: none;
+    overflow: hidden;
     padding: 1rem 0 2rem;
+    /* Fade edges for polished look */
+    mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 8%,
+      black 92%,
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0%,
+      black 8%,
+      black 92%,
+      transparent 100%
+    );
   }
 
   .testimonials-section .section-header {
@@ -950,15 +963,16 @@ section {
 
   .section-grid {
     display: flex;
-    flex-direction: row;
     flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: visible;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
     gap: 1rem;
-    padding: 1rem 1.5rem;
+    padding: 1rem 0;
     margin-bottom: 0;
+    width: max-content;
+    animation: testimonial-scroll 30s linear infinite;
+  }
+
+  .section-grid:hover {
+    animation-play-state: paused;
   }
 
   .section-grid::-webkit-scrollbar {
@@ -967,10 +981,7 @@ section {
 
   .testimonial-card {
     flex-shrink: 0;
-    width: 80vw;
-    max-width: 380px;
-    min-width: 280px;
-    scroll-snap-align: center;
+    width: 300px;
     padding: 20px;
   }
 
@@ -1111,9 +1122,7 @@ section {
 
   /* Testimonial cards shrink more */
   .testimonial-card {
-    flex-shrink: 0;
-    width: 280px;
-    min-width: 260px;
+    width: 270px;
   }
 
   /* Section headers tighter */
@@ -1247,9 +1256,7 @@ section {
   }
 
   .testimonial-card {
-    flex-shrink: 0;
-    width: 250px;
-    min-width: 240px;
+    width: 240px;
     padding: 14px;
   }
 
@@ -1297,5 +1304,17 @@ section {
   .footer-links h4,
   .footer-social h4 {
     font-size: var(--font-size-s);
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+       Infinite scroll keyframes for testimonials
+   ═══════════════════════════════════════════════════ */
+@keyframes testimonial-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
