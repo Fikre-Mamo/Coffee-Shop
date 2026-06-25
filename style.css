@@ -1,5 +1,6 @@
 /* Import the font */
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+
 /* Basic Reset */
 * {
   padding: 0;
@@ -8,9 +9,12 @@
   font-family: "poppins", sans-serif;
   text-decoration: none;
 }
-ul, ol {
+
+ul,
+ol {
   list-style: none;
 }
+
 :root {
   --white-color: #fff;
   --dark-color: #252525;
@@ -42,9 +46,11 @@ ul, ol {
   /* Site max Width */
   --site-max-width: 1400px;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 button {
   border: none;
   background-color: transparent;
@@ -63,6 +69,7 @@ button {
   z-index: 100;
   transition: top 0.3s ease;
 }
+
 .skip-link:focus {
   top: 0;
 }
@@ -72,6 +79,7 @@ button {
   outline: 3px solid var(--secondary-color);
   outline-offset: 2px;
 }
+
 button:focus-visible {
   outline: 3px solid var(--secondary-color);
   outline-offset: 2px;
@@ -84,9 +92,11 @@ button:focus-visible {
   height: auto;
   object-fit: contain;
 }
+
 span {
   position: relative;
 }
+
 .coffee-cup {
   position: absolute;
   bottom: 1px;
@@ -100,21 +110,25 @@ span {
   z-index: 5;
   background: var(--primary-color);
 }
+
 .nav-bar {
   margin: 0 auto;
   padding: 0 20px;
   max-width: var(--site-max-width);
 }
+
 .header .nav-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
 }
+
 .nav-menu {
   display: flex;
   gap: 15px;
 }
+
 .nav-menu-close {
   display: none;
 }
@@ -126,11 +140,13 @@ span {
   font-family: "great vibes", Miniver;
   transition: all 0.4s ease;
 }
+
 .logo-text:hover {
   color: var(--secondary-color);
   font-weight: var(--font-weight-bold);
   font-family: "great vibes", Miniver;
 }
+
 .nav-link {
   color: var(--white-color);
   font-size: var(--font-size-n);
@@ -139,17 +155,19 @@ span {
   transition: all 0.4s ease;
   border-radius: var(--border-radius-m);
 }
+
 .nav-link:hover {
   color: var(--primary-color);
   background-color: var(--secondary-color);
 }
+
 .nav-bar :where(#menu-close-button, #menu-open-button) {
   display: none;
 }
 
 /* add margin-top for all sections because the header is fixed */
 section {
-  scroll-margin-top: 68px; 
+  scroll-margin-top: 68px;
 }
 
 /* Hero Section */
@@ -195,6 +213,7 @@ section {
   display: flex;
   gap: 25px;
 }
+
 .hero-section .hero-details .button {
   padding: 10px 26px;
   border: 2px solid transparent;
@@ -204,6 +223,7 @@ section {
   font-weight: var(--font-weight-medium);
   transition: all 0.4s ease;
 }
+
 .hero-section .hero-details .button:hover {
   color: var(--white-color);
   border: 2px solid var(--white-color);
@@ -220,6 +240,7 @@ section {
   border: 2px solid var(--white-color);
   background-color: transparent;
 }
+
 .hero-section .hero-details .contact-us:hover {
   border: 2px solid transparent;
   color: var(--primary-color);
@@ -235,18 +256,21 @@ section {
 .about-section {
   background-color: var(--light-pink-color);
 }
+
 .about-section .section-container {
   color: var(--dark-color);
   gap: 2rem;
   padding: 20px;
   text-align: center;
 }
+
 .section-title {
   font-family: "great vibes";
   font-size: var(--font-size-xxl);
   font-weight: var(--font-weight-bold);
   color: var(--secondary-color);
 }
+
 .section-title::after {
   content: "";
   width: 80px;
@@ -256,6 +280,7 @@ section {
   border-radius: var(--border-radius-s);
   background-color: var(--primary-color);
 }
+
 .about-section .about-details .text {
   line-height: 1.7rem;
   margin-bottom: 10px;
@@ -272,11 +297,13 @@ section {
   gap: 25px;
   justify-content: center;
 }
+
 .about-section .social-link-list .social-link {
   color: var(--primary-color);
   font-size: var(--font-size-l);
   transition: all 0.4s ease;
 }
+
 .about-section .social-link-list .social-link:hover {
   color: var(--secondary-color);
 }
@@ -288,6 +315,7 @@ section {
   color: white;
   padding-top: 3rem;
 }
+
 .menu-img {
   width: 100%;
   height: 100%;
@@ -297,10 +325,11 @@ section {
 
 .menu-section {
   background-color: var(--primary-color);
-  background-size:cover;
+  background-size: cover;
   background-position: center;
   min-height: 100dvh;
 }
+
 .our-menu {
   font-family: "great vibes";
   font-size: var(--font-size-l);
@@ -322,6 +351,7 @@ section {
   margin-left: auto;
   margin-right: auto;
 }
+
 .divider {
   display: flex;
   align-items: center;
@@ -360,7 +390,7 @@ section {
 
 .filter-btn {
   padding: 12px 28px;
-  border: 2px solid rgba(255,255,255,0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 999px;
 
   background: #2D1016;
@@ -389,12 +419,13 @@ section {
   padding: 30px 10px;
   display: block;
 }
+
 .menu-card .card-image {
   border-radius: var(--border-radius-s);
   overflow: hidden;
 }
 
-.menu-section .menu-card{
+.menu-section .menu-card {
   display: flex;
   flex-direction: column;
   border: 2px solid rgba(149, 24, 24, 0.4);
@@ -408,15 +439,18 @@ section {
   transform: translateY(-10px);
   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
+
 .menu-card .card-text {
   padding: 10px;
   flex: 1;
 }
+
 .menu-card .card-content {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
+
 .card-footer {
   position: relative;
   display: flex;
@@ -437,7 +471,7 @@ section {
 .grid-container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 1fr); 
+  grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
 
@@ -452,6 +486,7 @@ section {
   justify-content: center;
   transition: all 0.3s ease;
 }
+
 .card-add:hover {
   background-color: #ffa632;
   transform: scale(1.1);
@@ -481,35 +516,34 @@ section {
   position: relative;
   overflow: hidden;
   min-height: 100dvh;
-  mask-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 1) 20%,
-    rgba(0, 0, 0, 1) 80%,
-    rgba(0, 0, 0, 0)
-  );
 }
+
 .testimonials-section .section-header {
   top: 6rem;
   padding-top: 1.5rem;
   color: var(--dark-color);
 }
+
 .section-header .title {
   font-family: 'great vibes';
   color: var(--secondary-color);
   font-size: var(--font-size-xl);
   padding-bottom: 1rem;
 }
+
 .section-header .subtitle {
   font-size: var(--font-size-xl);
 }
+
 .section-header .span-subtitle {
   color: var(--secondary-color);
 }
+
 .section-header .description {
   font-family: 'great vibes';
   font-size: var(--font-size-m);
 }
+
 .section-header .span-great-coffee {
   font-family: 'great vibes';
   color: var(--secondary-color);
@@ -532,14 +566,16 @@ section {
 ================================================ */
 
 .testimonial-card {
-  background-color: #3b1620; /* Slightly lighter for contrast */
+  background-color: #3b1620;
+  /* Slightly lighter for contrast */
   border-radius: var(--border-radius-n);
   padding: 25px;
   color: var(--white-color);
   text-align: left;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
 }
+
 .testimonial-card:hover {
   transform: translateY(-5px);
 }
@@ -565,9 +601,11 @@ section {
   gap: 10px;
   padding-top: 25px;
 }
+
 .message {
   padding: 10px;
 }
+
 .city {
   color: var(--secondary-color);
 }
@@ -576,20 +614,24 @@ section {
 .contact-section {
   background-color: var(--primary-color);
 }
+
 .contact-container {
   text-align: center;
   padding: 80px 30px;
 }
+
 .contact-details {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .contact-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
   margin-top: 3rem;
 }
+
 .contact-card {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
@@ -603,11 +645,13 @@ section {
   color: var(--white-color);
   transition: all 0.3s ease;
 }
+
 .contact-card:hover {
   background: rgba(255, 255, 255, 0.1);
   transform: translateY(-5px);
   border-color: var(--secondary-color);
 }
+
 .contact-icon {
   width: 60px;
   height: 60px;
@@ -621,13 +665,16 @@ section {
   margin-bottom: 0.5rem;
   transition: transform 0.3s ease;
 }
+
 .contact-card:hover .contact-icon {
   transform: scale(1.1) rotate(5deg);
 }
+
 .contact-card h3 {
   font-size: var(--font-size-l);
   color: var(--secondary-color);
 }
+
 .contact-card p {
   font-size: var(--font-size-s);
   color: rgba(255, 255, 255, 0.8);
@@ -640,6 +687,7 @@ section {
   padding: 4rem 2rem 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
+
 .footer-container {
   max-width: var(--site-max-width);
   margin: 0 auto;
@@ -648,51 +696,62 @@ section {
   flex-wrap: wrap;
   gap: 2rem;
 }
+
 .footer-brand {
   max-width: 300px;
 }
+
 .footer-logo {
   font-size: var(--font-size-l);
 }
+
 .footer-tagline {
   margin-top: 0.75rem;
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.6;
 }
+
 .footer-links h4,
 .footer-social h4 {
   color: var(--secondary-color);
   margin-bottom: 1rem;
   font-size: var(--font-size-n);
 }
+
 .footer-links ul {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
 }
+
 .footer-links a {
   color: rgba(255, 255, 255, 0.7);
   transition: all 0.3s ease;
   display: inline-block;
 }
+
 .footer-links a:hover {
   color: var(--secondary-color);
   transform: translateX(5px);
 }
+
 .footer-social .social-link-list {
   display: flex;
   gap: 1.25rem;
 }
+
 .footer-social .social-link {
   color: rgba(255, 255, 255, 0.7);
   font-size: var(--font-size-m);
   transition: all 0.3s ease;
   display: inline-block;
 }
+
 .footer-social .social-link:hover {
   color: var(--secondary-color);
   transform: translateY(-4px);
 }
+
 .footer-bottom {
   text-align: center;
   margin-top: 2rem;
@@ -719,6 +778,7 @@ section {
   transition: all 0.4s ease;
   pointer-events: none;
 }
+
 .toast.show {
   opacity: 1;
   transform: translateX(-50%) translateY(0);
@@ -726,11 +786,15 @@ section {
 
 /* Prefers reduced motion */
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+
   html {
     scroll-behavior: auto;
   }
@@ -763,17 +827,21 @@ section {
     display: block;
     font-size: var(--font-size-l);
   }
+
   .nav-bar #menu-close-button {
     position: absolute;
     right: 30px;
     top: 30px;
   }
+
   .nav-menu-close {
     display: block;
   }
+
   .hero-section .hero-details .subtitle {
     line-height: 2rem;
   }
+
   .nav-bar #menu-open-button {
     color: var(--white-color);
   }
@@ -802,6 +870,7 @@ section {
     font-size: var(--font-size-l);
     margin-top: 17px;
   }
+
   .hero-section .section-container {
     gap: 50px;
     text-align: center;
@@ -809,16 +878,20 @@ section {
     flex-direction: column-reverse;
     justify-content: center;
   }
+
   .hero-section .hero-image-wrapper {
     max-width: 270px;
     margin-right: 0;
   }
+
   .hero-section .hero-details :is(.subtitle, .description) {
     max-width: 98%;
   }
+
   .hero-section .hero-details .buttons {
     justify-content: center;
   }
+
   .about-image {
     max-width: 500px;
   }
@@ -837,6 +910,7 @@ section {
     min-height: auto;
     padding: 4rem 0;
   }
+
   .testimonials-section .section-container {
     position: relative;
     min-height: auto;
@@ -845,21 +919,26 @@ section {
     mask-image: none;
     padding: 1rem 0 2rem;
   }
+
   .testimonials-section .section-header {
     position: relative;
     top: auto;
     padding: 0 1.5rem 2rem;
   }
+
   .section-header .title {
     font-size: var(--font-size-xxl);
     padding-bottom: 0.5rem;
   }
+
   .section-header .subtitle {
     font-size: var(--font-size-xl);
   }
+
   .section-header .description {
     font-size: var(--font-size-m);
   }
+
   .section-grid {
     display: flex;
     flex-direction: row;
@@ -872,9 +951,11 @@ section {
     padding: 1rem 1.5rem;
     margin-bottom: 0;
   }
+
   .section-grid::-webkit-scrollbar {
     display: none;
   }
+
   .testimonial-card {
     width: 80vw;
     max-width: 380px;
@@ -882,18 +963,21 @@ section {
     scroll-snap-align: center;
     padding: 20px;
   }
+
   .testimonial-card .message {
     padding: 10px;
     font-size: var(--font-size-n);
   }
+
   .testimonial-card .user-img {
     width: 60px;
   }
+
   .testimonial-card .user {
     padding-top: 15px;
     gap: 12px;
   }
-  
+
   .contact-cards {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -903,6 +987,7 @@ section {
     text-align: center;
     align-items: center;
   }
+
   .footer-brand {
     max-width: 100%;
   }
@@ -914,14 +999,16 @@ section {
 
 @media (max-width: 1400px) {
 
-  .grid-container{
+  .grid-container {
     grid-template-columns: repeat(4, 1fr);
   }
+
   .menu-section .section-container {
     max-width: 100%;
   }
+
   .menu-section {
-    padding:20px;
+    padding: 20px;
   }
 }
 
@@ -930,14 +1017,16 @@ section {
    ═══════════════════════════════════════════════════ */
 @media (min-width: 651px) and (max-width: 850px) {
 
-  .grid-container{
+  .grid-container {
     grid-template-columns: repeat(3, 1fr);
   }
+
   .menu-section .section-container {
     max-width: 100%;
   }
+
   .menu-section {
-    padding:20px;
+    padding: 20px;
   }
 }
 
@@ -958,28 +1047,33 @@ section {
     padding: 1.5rem 1rem;
   }
 
-  .grid-container{
+  .grid-container {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .menu-card .card-content {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
+
   .menu-section .menu-card {
     flex-direction: row;
     gap: 5px;
     max-width: 100%;
   }
+
   .card-content .card-footer {
     margin-top: 0;
     padding: 5px 10px;
   }
-  .menu-card .card-image{
+
+  .menu-card .card-image {
     height: 90%;
     width: 50%;
     padding-left: 5px;
   }
+
   .card-text {
     font-size: 12px;
     font-weight: 300;
@@ -994,9 +1088,11 @@ section {
     padding-bottom: 0.25rem;
     justify-content: flex-start;
   }
+
   .menu-filters::-webkit-scrollbar {
     display: none;
   }
+
   .filter-btn {
     flex-shrink: 0;
     padding: 10px 20px;
@@ -1013,12 +1109,15 @@ section {
   .section-header {
     padding-top: 2rem;
   }
+
   .menu-title {
     font-size: var(--font-size-xl);
   }
+
   .our-menu {
     font-size: var(--font-size-m);
   }
+
   .about-menu {
     font-size: var(--font-size-s);
     padding: 0 1rem;
@@ -1034,6 +1133,7 @@ section {
   .contact-container {
     padding: 60px 20px;
   }
+
   .contact-cards {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -1042,14 +1142,17 @@ section {
   .hero-section .hero-details .title {
     font-size: var(--font-size-xxl);
   }
+
   .hero-section .hero-details .subtitle {
     font-size: var(--font-size-xl);
     line-height: 1.6;
   }
+
   .hero-section .hero-details .description {
     font-size: var(--font-size-m);
     max-width: 100%;
   }
+
   .hero-section .hero-details .button {
     padding: 8px 20px;
     font-size: var(--font-size-s);
@@ -1057,7 +1160,7 @@ section {
 }
 
 @media (max-width: 600px) {
-  .grid-container{
+  .grid-container {
     grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -1078,17 +1181,21 @@ section {
     gap: 30px;
     padding: 20px 15px 15px;
   }
+
   .hero-section .hero-image-wrapper {
     max-width: 200px;
   }
+
   .hero-section .hero-details .subtitle {
     line-height: 1.5;
   }
+
   .buttons {
     gap: 12px;
     flex-wrap: wrap;
     justify-content: center;
   }
+
   .hero-section .hero-details .button {
     padding: 8px 16px;
     font-size: var(--font-size-s);
@@ -1098,10 +1205,12 @@ section {
   .section-title {
     font-size: var(--font-size-xxl);
   }
+
   .great-vibes {
     font-size: var(--font-size-l);
     margin: 1rem 0;
   }
+
   .about-section .about-details .text {
     font-size: var(--font-size-s);
     line-height: 1.5rem;
@@ -1111,6 +1220,7 @@ section {
   .section-header {
     padding-top: 1.5rem;
   }
+
   .divider::before,
   .divider::after {
     width: 50px;
@@ -1120,31 +1230,39 @@ section {
   .testimonials-section {
     padding: 2rem 0;
   }
+
   .testimonials-section .section-container {
     padding: 0.5rem 1rem 1.5rem;
   }
+
   .testimonial-card {
     width: 250px;
     min-width: 240px;
     padding: 14px;
   }
+
   .testimonial-card .message p {
     font-size: 0.8rem;
     line-height: 1.4;
   }
+
   .testimonial-card .user-img {
     width: 40px;
   }
+
   .rating-section {
     padding: 3px;
   }
+
   .rating i {
     font-size: 0.75rem;
   }
+
   .section-header .title {
     font-size: var(--font-size-m);
     padding-bottom: 0.25rem;
   }
+
   .section-header .subtitle {
     font-size: var(--font-size-l);
   }
@@ -1153,6 +1271,7 @@ section {
   .contact-container {
     padding: 40px 15px;
   }
+
   .contact-item {
     font-size: var(--font-size-s);
     gap: 0.5rem;
@@ -1162,6 +1281,7 @@ section {
   .site-footer {
     padding: 2rem 1rem 1rem;
   }
+
   .footer-links h4,
   .footer-social h4 {
     font-size: var(--font-size-s);
